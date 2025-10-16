@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'SpokySpiders';
-  src: url('../public/fonts/SpokySpiders.woff') format('woff');
+  src: url('../fonts/SpokySpiders.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap; /* buena práctica: usa fuente del sistema mientras carga */

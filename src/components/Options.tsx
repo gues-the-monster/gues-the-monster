@@ -12,7 +12,7 @@ export default function Options({ opciones, onSelect, disabled }: Props) {
           key={i}
           disabled={disabled}
           onClick={() => onSelect(op)}
-          className='bg-red-900 text-white py-2 px-4 rounded-lg hover:bg-red-700  hover:scale-110 hover:rotate-2 disabled:opacity-50 transition-all duration-300'
+          className='bg-gray-600 text-2xl text-white py-2 px-4 rounded-lg hover:bg-gray-900  hover:scale-110 hover:rotate-2 disabled:opacity-30 transition-all duration-300'
         >
           {op}
         </button>

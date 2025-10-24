@@ -1,14 +1,24 @@
+
+/* jolly-lodger-regular - latin */
 @font-face {
-  font-family: 'SpokySpiders';
-  src: url('../fonts/SpokySpiders.woff') format('woff');
-  font-weight: normal;
+  font-display: swap;
+  font-family: 'Jolly Lodger';
   font-style: normal;
-  font-display: swap; /* buena práctica: usa fuente del sistema mientras carga */
+  font-weight: 400;
+  src: url('../fonts/jolly-lodger-v21-latin-regular.woff2') format('woff2');
 }
+
+
 
 @theme {
-  --font-spooky: 'SpokySpiders', ui-sans-serif, system-ui, sans-serif;
+  --font-spooky: 'Jolly Lodger', ui-sans-serif, system-ui, sans-serif;
 }
 
-
 @import 'tailwindcss';
+
+body {
+  font-family: var(--font-spooky);
+  background-image: url('./images/spooky-bg.jpg');
+  background-size: cover;
+  background-position: bottom;
+}

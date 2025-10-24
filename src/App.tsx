@@ -1,9 +1,11 @@
-import { Game } from './assets/pages/Game';
+import Game from "./pages/GamePage";
+import './index.css';
+
 
 function App() {
   return (
     <>
-      <div className='bg-gray-700 w-full h-screen flex items-center justify-center'>
+      <div className=' w-full h-screen flex items-center justify-center'>
         <Game />
       </div>
     </>

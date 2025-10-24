@@ -5,7 +5,7 @@ interface Props {
 
 export default function MonsterView({ estado, imagen }: Props) {
   return (
-    <div className='relative w-85 h-64 mx-auto my-6'>
+    <div className='relative w-85 h-64 mx-auto my-4'>
       {/* letrero de madera detras del monstruo */}
       <img
         src='./images/wooden-sign.png'
@@ -17,7 +17,7 @@ export default function MonsterView({ estado, imagen }: Props) {
         src={imagen}
         alt='monstruo'
         className={`w-full h-full object-contain p-6 transition-all duration-500 z-100 ${
-          estado === 'silueta' ? 'filter blur' : ''
+          estado === 'silueta' ? 'blur-xs' : 'saturate-200'
         }`}
       />
       {/* X sobre el monstruo en caso de no adivinar el monstruo */}

@@ -1,8 +1,7 @@
-import { RandomMonster, VerifyResponse } from '../types/monsterTypes';
+import { RandomMonster } from '../types/monsterTypes';
 
 export async function getRandomMonster(): Promise<RandomMonster> {
-  const response = await fetch('http://127.0.0.1:3658/m1/1038134-1025263-default/v1/mons/random');
+  const response = await fetch('https://mocki.io/v1/5b96e9d1-a060-42bf-b405-193b2cce7e0b');
   const data: RandomMonster = await response.json();
   return data;
 }
-

@@ -1,7 +1,10 @@
 import { RandomMonster } from '../types/monsterTypes';
+import { environment } from '../settings/environment ';
+
+const URL = environment.API_URL;
 
 export async function getRandomMonster(): Promise<RandomMonster> {
-  const response = await fetch('https://mocki.io/v1/5b96e9d1-a060-42bf-b405-193b2cce7e0b');
+  const response = await fetch();
   const data: RandomMonster = await response.json();
   return data;
 }

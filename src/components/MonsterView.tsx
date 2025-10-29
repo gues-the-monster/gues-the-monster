@@ -1,11 +1,11 @@
 interface Props {
   estado: 'silueta' | 'acierto' | 'error';
-  imagen: string; //url de la imagen (silueta o real)
+  imagen: string; 
 }
 
 export default function MonsterView({ estado, imagen }: Props) {
   return (
-    <div className='relative w-85 h-64 mx-auto my-4'>
+    <div className='relative md:h-75 xl:h-100 h-64 mx-auto my-4'>
       {/* letrero de madera detras del monstruo */}
       <img
         src='./images/wooden-sign.png'

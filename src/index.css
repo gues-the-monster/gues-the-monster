@@ -1,5 +1,5 @@
-
 /* jolly-lodger-regular - latin */
+
 @font-face {
   font-display: swap;
   font-family: 'Jolly Lodger';
@@ -7,8 +7,6 @@
   font-weight: 400;
   src: url('../fonts/jolly-lodger-v21-latin-regular.woff2') format('woff2');
 }
-
-
 
 @theme {
   --font-spooky: 'Jolly Lodger', ui-sans-serif, system-ui, sans-serif;

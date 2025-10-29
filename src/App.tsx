@@ -1,10 +1,12 @@
-import { Game } from './assets/pages/Game';
+import Game from './pages/GamePage';
+import { AppRouter } from './router/AppRouter';
+import './index.css';
 
 function App() {
   return (
     <>
-      <div className='bg-gray-700 w-full h-screen flex items-center justify-center'>
-        <Game />
+      <div className=' w-full h-screen flex items-center justify-center'>
+        <AppRouter />
       </div>
     </>
   );

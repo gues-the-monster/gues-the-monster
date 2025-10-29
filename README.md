@@ -44,4 +44,10 @@ This version was made for **Devathon Halloween** 🎃
 
 ---
 
-## ⚙️
+## ⚙️ Installation
+
+1. clone the project
+2. cd guess-the-monster
+3. npm i
+4. set env file
+5. ready

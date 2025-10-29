@@ -1,4 +1,3 @@
-import Game from './pages/GamePage';
 import { AppRouter } from './router/AppRouter';
 import './index.css';
 

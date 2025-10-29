@@ -1,5 +1,7 @@
+import { TriviaOption } from '../types/monsterTypes';
+
 interface Props {
-  opciones: string[];
+  opciones: TriviaOption[];
   onSelect: (opcion: string) => void;
   disabled: boolean;
 }
@@ -11,10 +13,10 @@ export default function Options({ opciones, onSelect, disabled }: Props) {
         <button
           key={i}
           disabled={disabled}
-          onClick={() => onSelect(op)}
+          onClick={() => onSelect(op.id.toString())}
           className='bg-gray-600 text-2xl text-white py-2 px-4 rounded-lg hover:bg-gray-900  hover:scale-110 hover:rotate-2 disabled:opacity-30 transition-all duration-300'
         >
-          {op}
+          {op.monsterName}
         </button>
       ))}
     </div>

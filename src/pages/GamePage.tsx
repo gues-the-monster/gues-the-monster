@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
-import { RandomMonster, VerifyResponse } from '../types/monsterTypes';
+import { TriviaResponse, ValidationRequest } from '../types/monsterTypes';
 import MonsterView from '../components/MonsterView';
 import Options from '../components/Options';
 import Message from '../components/Message';
 import { getRandomMonster } from '../api/monsterApi';
 
 export default function Game() {
-  const [monster, setMonster] = useState<RandomMonster | null>(null);
+  const [monster, setMonster] = useState<TriviaResponse | null>(null);
   const [estado, setEstado] = useState<'silueta' | 'acierto' | 'error'>('silueta'); //estado del juego
   const [mensaje, setMensaje] = useState<string>('?');
   const [imagen, setImagen] = useState<string>('');
@@ -20,7 +20,7 @@ export default function Game() {
     setMensaje('?');
     const data = await getRandomMonster();
     setMonster(data);
-    setImagen(data.imagenSilueta);
+    setImagen(data.data.silhouetteURL);
   }
 
   return (
@@ -34,7 +34,7 @@ export default function Game() {
           <MonsterView estado={estado} imagen={imagen} />
 
           <Options
-            opciones={monster.opciones}
+            opciones={monster.data.options}
             onSelect={() => null} // Manejar la selección de opciones
             disabled={estado !== 'silueta'} // Deshabilitar opciones si no está en estado 'silueta'
           />

@@ -21,13 +21,13 @@ export default function MonsterView({ estado, imagen }: Props) {
         }`}
       />
       {/* X sobre el monstruo en caso de no adivinar el monstruo */}
-      {estado === 'error' && (
+      {/* {estado === 'error' && (
         <img
           src='/x-overlay.png'
           alt='error'
           className='absolute inset-0 w-full h-full object-contain'
         />
-      )}
+      )} */}
     </div>
   );
 }

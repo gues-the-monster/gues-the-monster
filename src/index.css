@@ -20,3 +20,152 @@ body {
   background-size: cover;
   background-position: bottom;
 }
+
+
+
+
+@keyframes spiderMove {
+  0% {
+    top: 0%;
+    transform: translateX(-50%) scale(1);
+  }
+  25% {
+    top: 25%;
+    transform: translateX(-50%) scale(1.05);
+  }
+  50% {
+    top: 50%;
+    transform: translateX(-50%) scale(1.1);
+  }
+  75% {
+    top: 75%;
+    transform: translateX(-50%) scale(1.05);
+  }
+  100% {
+    top: 95%;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+@keyframes webWeave {
+  0% {
+    height: 0%;
+    opacity: 0.3;
+  }
+  20% {
+    height: 20%;
+    opacity: 0.5;
+  }
+  40% {
+    height: 40%;
+    opacity: 0.7;
+  }
+  60% {
+    height: 60%;
+    opacity: 0.8;
+  }
+  80% {
+    height: 80%;
+    opacity: 0.9;
+  }
+  100% {
+    height: 95%;
+    opacity: 1;
+  }
+}
+
+@keyframes webGrow {
+  0% {
+    height: 0%;
+  }
+  50% {
+    height: 95%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
+.animate-spiderMove {
+  animation: spiderMove 4s ease-in-out infinite;
+}
+
+.animate-webGrow {
+  animation: webWeave 4s ease-in-out infinite;
+}
+
+
+
+/* Animaciones de murciélagos volando */
+@keyframes batFloat {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(-50%) translateY(-10px) rotate(-2deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateX(-50%) translateY(5px) rotate(2deg);
+  }
+}
+
+/* Animación de aleteo de las alas */
+@keyframes wingFlap {
+  0%, 100% {
+    transform: scaleY(1) translateY(0);
+    transform-origin: center;
+  }
+  25% {
+    transform: scaleY(0.85) translateY(5px);
+    transform-origin: center;
+  }
+  50% {
+    transform: scaleY(1.1) translateY(-3px);
+    transform-origin: center;
+  }
+  75% {
+    transform: scaleY(0.95) translateY(2px);
+    transform-origin: center;
+  }
+}
+
+/* Animación más pronunciada para aleteo */
+@keyframes wingFlapStrong {
+  0%, 100% {
+    transform: scaleY(1) rotate(0deg);
+    transform-origin: top center;
+  }
+  33% {
+    transform: scaleY(0.7) rotate(-3deg);
+    transform-origin: top center;
+  }
+  66% {
+    transform: scaleY(1.2) rotate(2deg);
+    transform-origin: top center;
+  }
+}
+
+.animate-batFloat {
+  animation: batFloat 6s ease-in-out infinite;
+}
+
+.animate-wingFlap {
+  animation: wingFlap 0.6s ease-in-out infinite;
+}
+
+/* Estilos específicos para cada ala */
+.bat-wing-left {
+  transform-origin: 250px 300px; /* Ajusta según tu SVG */
+}
+
+.bat-wing-right {
+  transform-origin: 650px 300px; /* Ajusta según tu SVG */
+}
+
+.bat-body {
+  /* El cuerpo permanece estático */
+  transform-origin: center;
+}
